@@ -39,7 +39,7 @@ class MMKuNyiModel private constructor(
                 mErrorLD.value = error!!.message
             }
 
-            override fun onDataChange(dataSnapshot: DataSnapshot) {
+            override fun onDataChange(dataSnapshot: DataSnapshot?) {
                 val jobsList = ArrayList<MmKuNyiResponse>()
                 if (dataSnapshot != null) {
 
