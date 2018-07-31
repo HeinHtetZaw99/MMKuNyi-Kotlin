@@ -3,7 +3,7 @@ package com.daniel.user.mmkunyi.data
 import android.arch.lifecycle.MutableLiveData
 import android.content.Context
 import android.util.Log
-import com.daniel.user.mmkunyi.data.vos.MmKuNyiResponse
+import com.daniel.user.mmkunyi.data.vos.MMKunyiResponse
 import com.google.firebase.database.*
 
 class MMKuNyiModel private constructor(
@@ -31,7 +31,7 @@ class MMKuNyiModel private constructor(
 
     }
 
-    fun loadJobsFeed(mJobsLD: MutableLiveData<List<MmKuNyiResponse>>, mErrorLD: MutableLiveData<String>) {
+    fun loadJobsFeed(mJobsLD: MutableLiveData<List<MMKunyiResponse>>, mErrorLD: MutableLiveData<String>) {
         Log.d("MM", "Reached in loadJobsFeed")
 
         mDataBaseReference.addValueEventListener(object : ValueEventListener {
@@ -40,12 +40,12 @@ class MMKuNyiModel private constructor(
             }
 
             override fun onDataChange(dataSnapshot: DataSnapshot?) {
-                val jobsList = ArrayList<MmKuNyiResponse>()
+                val jobsList = ArrayList<MMKunyiResponse>()
                 if (dataSnapshot != null) {
 
                     for (snapShot in dataSnapshot.children) {
-                        val jobItem: MmKuNyiResponse? = snapShot.getValue<MmKuNyiResponse>(MmKuNyiResponse::class.java)
-                        jobsList.add(jobItem!!)
+                        val jobItem: MMKunyiResponse = snapShot.getValue<MMKunyiResponse>(MMKunyiResponse::class.java)!!
+                        jobsList.add(jobItem)
                     }
                     mJobsLD.value = jobsList
 

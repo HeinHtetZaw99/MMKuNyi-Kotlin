@@ -26,6 +26,7 @@
                 android:layout_margin="@dimen/padding_small"
                 android:fontFamily="sans-serif"
                 android:text="HouseKeeping"
+                android:maxWidth="200dp"
                 android:textColor="@color/colorBlack"
                 android:textSize="@dimen/text_heading_1x"
                 android:textStyle="bold" />
@@ -75,7 +76,7 @@
 #Guiding_and_helping out students"
                     android:textColor="@color/colorBlack"
                     android:textSize="@dimen/text_regular_2x"
-                    android:textStyle="bold" />
+                    android:textStyle="bold|italic" />
 
             </LinearLayout>
 
@@ -97,16 +98,20 @@
                     android:layout_weight="1"
                     android:drawableStart="@drawable/icon_timer"
                     android:text="300 hours"
-                    android:textSize="@dimen/text_regular_3x" />
+                    android:gravity="center"
+                    android:textSize="@dimen/text_regular" />
 
                 <TextView
                     android:id="@+id/jobLocation"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:gravity="center"
+                    android:maxLines="2"
+                    android:maxWidth="100dp"
                     android:drawableStart="@drawable/icon_map"
                     android:text="Kamaryut"
-                    android:textSize="@dimen/text_regular_3x" />
+                    android:textSize="@dimen/text_regular" />
 
                 <TextView
                     android:id="@+id/totalWorkingDays"
@@ -115,7 +120,8 @@
                     android:layout_weight="1"
                     android:drawableStart="@drawable/icon_days"
                     android:text="3 days"
-                    android:textSize="@dimen/text_regular_3x" />
+                    android:gravity="center"
+                    android:textSize="@dimen/text_regular" />
             </LinearLayout>
         </RelativeLayout>
 
