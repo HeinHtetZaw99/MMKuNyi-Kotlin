@@ -47,4 +47,6 @@
     <dimen name="size_tappable_small">48dp</dimen>
     <dimen name="button_large_size">54dp</dimen>
     <dimen name="news_details_publication_logo_margin_bottom">36dp</dimen>
+    <dimen name="apply_btn">40dp</dimen>
+    <dimen name="textview_width_large">300dp</dimen>
 </resources>

@@ -3,11 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_marginEnd="@dimen/padding_small"
     android:layout_marginStart="@dimen/padding_small"
     android:layout_marginTop="@dimen/padding_small"
     app:cardCornerRadius="@dimen/padding_small"
-    app:cardElevation="@dimen/margin_card_medium">
+    app:cardElevation="@dimen/margin_card_medium"
+    android:background="@color/colorWhite">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -31,8 +33,16 @@
                 android:textSize="@dimen/text_heading_1x"
                 android:textStyle="bold" />
 
+            <View
+                android:id="@+id/jobState"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/colorGreen"
+                android:layout_below="@id/jobTitle"
+                />
+
             <TextView
-                android:id="@+id/cost"
+                android:id="@+id/rating"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
@@ -41,7 +51,7 @@
                 android:background="@drawable/yellow_btn"
                 android:paddingEnd="@dimen/padding_small"
                 android:paddingStart="@dimen/padding_small"
-                android:text="$2000"
+                android:text="123"
                 android:textColor="@color/colorBlack"
                 android:textSize="@dimen/text_regular_3x"
                 android:textStyle="bold" />
@@ -50,12 +60,27 @@
                 android:id="@+id/jobDescription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignEnd="@id/cost"
+                android:layout_alignEnd="@id/rating"
                 android:layout_alignStart="@id/jobTitle"
                 android:layout_below="@id/jobTitle"
                 android:layout_marginTop="@dimen/padding_small"
                 android:text="@string/dummy_job"
                 android:textSize="@dimen/text_regular_3x" />
+
+
+            <TextView
+                android:id="@+id/amount"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:drawableStart = "@drawable/icon_money"
+                android:text="10000 MMKS"
+                android:gravity="center"
+                android:layout_alignStart="@id/jobTitle"
+                android:layout_marginTop="@dimen/padding_small"
+                android:layout_below="@id/jobDescription"
+                />
+
+
 
             <LinearLayout
                 android:id="@+id/tag"
@@ -63,7 +88,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignLeft="@id/jobDescription"
                 android:layout_alignRight="@id/jobDescription"
-                android:layout_below="@id/jobDescription"
+                android:layout_below="@id/amount"
                 android:layout_marginBottom="@dimen/padding_small"
                 android:layout_marginTop="@dimen/padding_small"
                 android:orientation="vertical">
@@ -139,54 +164,45 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/padding_small"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginEnd="@dimen/margin_medium"
             android:orientation="horizontal"
             android:weightSum="3">
 
-            <FrameLayout
-                android:id="@+id/like"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1">
 
-                <android.support.v7.widget.AppCompatButton
-                    android:layout_width="wrap_content"
+                <Button
+                    android:id="@+id/likeButton"
+                    android:layout_width="40dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:background="@android:color/transparent"
                     android:drawableStart="@drawable/icon_like"
-                    android:text="Like" />
-            </FrameLayout>
+                    tools:text="0"
+                    android:layout_weight="1"
+                    />
 
-            <FrameLayout
-                android:id="@+id/comment"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1">
 
-                <android.support.v7.widget.AppCompatButton
-                    android:layout_width="wrap_content"
+
+
+                <Button
+                    android:id="@+id/commentButton"
+                    android:layout_width="40dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:background="@android:color/transparent"
                     android:drawableStart="@drawable/icon_comment"
-                    android:text="Comment" />
-            </FrameLayout>
+                    android:text="1"
+                    android:layout_weight="1"/>
 
-            <FrameLayout
-                android:id="@+id/share"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1">
-
-                <android.support.v7.widget.AppCompatButton
-                    android:layout_width="wrap_content"
+                <Button
+                    android:id="@+id/shareButton"
+                    android:layout_width="40dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:background="@android:color/transparent"
-
+                    android:layout_weight="1"
                     android:drawableStart="@drawable/icon_share"
-                    android:text="Share" />
-            </FrameLayout>
+                    android:text="0" />
         </LinearLayout>
 
 

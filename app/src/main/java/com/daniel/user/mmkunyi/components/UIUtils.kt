@@ -1,4 +1,4 @@
-package com.daniel.user.mmhealthcare.components
+package com.daniel.user.mmkunyi.components
 
 import android.content.Context
 import android.graphics.Bitmap

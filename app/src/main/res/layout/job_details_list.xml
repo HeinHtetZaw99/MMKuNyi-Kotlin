@@ -5,10 +5,12 @@
     android:layout_marginTop="@dimen/padding_xlarge"
     android:orientation="vertical">
 
+
     <TextView
         android:id="@+id/jobDetailsTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_medium"
         android:gravity="center"
         android:paddingEnd="@dimen/padding_small"
         android:paddingStart="@dimen/padding_small"
@@ -17,195 +19,29 @@
         android:textSize="@dimen/text_heading_2x"
         android:textStyle="bold" />
 
-    <LinearLayout
+    <include
+        layout="@layout/card_view_job_details"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_margin="@dimen/margin_small" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/padding_medium"
-            android:paddingEnd="@dimen/padding_large"
-            android:paddingStart="@dimen/padding_large"
-            android:text="Description"
-            android:textColor="@color/colorBlack"
-            android:textSize="@dimen/text_regular_3x"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/jobDetailsDescription"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingEnd="@dimen/padding_large"
-            android:paddingStart="@dimen/padding_large"
-            android:text="This is the details of the job you have to do"
-            android:textSize="@dimen/text_regular_2x"
-            android:textStyle="bold" />
-    </LinearLayout>
-
-    <LinearLayout
+    <include
+        layout="@layout/card_view_required_skills"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_margin="@dimen/margin_small" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/padding_medium"
-            android:paddingEnd="@dimen/padding_large"
-            android:paddingStart="@dimen/padding_large"
-            android:text="Amount"
-            android:textColor="@color/colorBlack"
-            android:textSize="@dimen/text_regular_3x"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/jobDetailsAmount"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingEnd="@dimen/padding_large"
-            android:paddingStart="@dimen/padding_large"
-            android:text="5000 per day"
-            android:textSize="@dimen/text_regular_2x"
-            android:textStyle="bold" />
-    </LinearLayout>
-
-    <LinearLayout
+    <include
+        layout="@layout/card_view_job_duration"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_margin="@dimen/margin_small" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/padding_medium"
-            android:paddingEnd="@dimen/padding_large"
-            android:paddingStart="@dimen/padding_large"
-            android:text="Location"
-            android:textColor="@color/colorBlack"
-            android:textSize="@dimen/text_regular_3x"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/jobDetailsLocation"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingEnd="@dimen/padding_large"
-            android:paddingStart="@dimen/padding_large"
-            android:text="No 123 , Insein Road , Kamaryut Township, Yangon"
-            android:textSize="@dimen/text_regular_2x"
-            android:textStyle="bold" />
-    </LinearLayout>
-
-    <LinearLayout
+    <include
+        layout="@layout/card_view_important_notes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/padding_medium"
-            android:paddingEnd="@dimen/padding_large"
-            android:paddingStart="@dimen/padding_large"
-            android:text="Job Duration"
-            android:textColor="@color/colorBlack"
-            android:textSize="@dimen/text_regular_3x"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/jobDetailsDuration"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingEnd="@dimen/padding_large"
-            android:paddingStart="@dimen/padding_large"
-            android:text="15 days , 3 days per week , 2 hours per day"
-            android:textSize="@dimen/text_regular_2x"
-            android:textStyle="bold" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/padding_medium"
-            android:paddingEnd="@dimen/padding_large"
-            android:paddingStart="@dimen/padding_large"
-            android:text="Important Notes"
-            android:textColor="@color/colorBlack"
-            android:textSize="@dimen/text_regular_3x"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/jobDetailsImportantNotes"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingEnd="@dimen/padding_large"
-            android:paddingStart="@dimen/padding_large"
-            android:text=" * We want you to come early in the morning
- * Provide silent and air-con room"
-            android:textSize="@dimen/text_regular_2x"
-            android:textStyle="bold" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/padding_medium"
-            android:paddingEnd="@dimen/padding_large"
-            android:paddingStart="@dimen/padding_large"
-            android:text="Gender for Jobs"
-            android:textColor="@color/colorBlack"
-            android:textSize="@dimen/text_regular_3x"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/jobDetailsGender"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingEnd="@dimen/padding_large"
-            android:paddingStart="@dimen/padding_large"
-            android:text="unspecified"
-            android:textSize="@dimen/text_regular_2x"
-            android:textStyle="bold" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/padding_medium"
-            android:paddingEnd="@dimen/padding_large"
-            android:paddingStart="@dimen/padding_large"
-            android:text="Require Skills"
-            android:textColor="@color/colorBlack"
-            android:textSize="@dimen/text_regular_3x"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/jobDetailsRequireSkills"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingEnd="@dimen/padding_large"
-            android:paddingStart="@dimen/padding_large"
-            android:text="Good at sleeping"
-            android:textSize="@dimen/text_regular_2x"
-            android:textStyle="bold" />
-    </LinearLayout>
+        android:layout_margin="@dimen/margin_small" />
 
 
 </LinearLayout>

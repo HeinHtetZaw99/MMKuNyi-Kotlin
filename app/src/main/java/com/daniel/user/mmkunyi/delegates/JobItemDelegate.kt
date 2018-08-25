@@ -2,8 +2,10 @@ package com.daniel.user.mmkunyi.delegates
 
 interface JobItemDelegate {
 
-    fun onTabJobItem(id: Int)
+    fun onTabJobItem(id: String)
     fun onForceRefresh()
-    fun OnRefreshScreen()
+    fun onRefreshScreen()
+    fun onTapShare()
+    fun onTapLike(id : Long)
 
 }

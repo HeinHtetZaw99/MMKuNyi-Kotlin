@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="@dimen/margin_small"
+    android:orientation="vertical"
+    app:cardCornerRadius="@dimen/margin_small"
+    app:cardElevation="@dimen/margin_medium"
+    android:paddingBottom="@dimen/margin_medium">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/jobDetailsDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_medium"
+            android:background="@drawable/frame_rectangle"
+            android:padding="@dimen/padding_small"
+            android:text="This is the details of the job you have to do"
+            android:textSize="@dimen/text_regular_2x"
+            android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/jobDetailsAmount"
+                android:layout_width="@dimen/textview_width_large"
+                android:layout_height="wrap_content"
+                android:paddingEnd="@dimen/padding_small"
+                android:paddingStart="@dimen/padding_small"
+                android:text="  5000 MMks per day"
+                android:drawableStart="@drawable/icon_money"
+                android:drawablePadding="@dimen/padding_small"
+                android:gravity="center_vertical"
+                android:layout_marginTop="@dimen/margin_small"
+                android:textSize="@dimen/text_regular_2x"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/jobDetailsLocation"
+                android:layout_width="@dimen/textview_width_large"
+                android:layout_height="wrap_content"
+                android:paddingEnd="@dimen/padding_small"
+                android:paddingStart="@dimen/padding_small"
+                android:drawableStart="@drawable/icon_map"
+                android:drawablePadding="@dimen/padding_small"
+                android:gravity="center_vertical"
+                android:text="No 123 , Insein Road , Kamaryut Township, Yangon"
+                android:layout_marginTop="@dimen/margin_small"
+                android:textSize="@dimen/text_regular_2x"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/jobDetailsEmailAddress"
+                android:layout_width="@dimen/textview_width_large"
+                android:layout_height="wrap_content"
+                android:paddingEnd="@dimen/padding_small"
+                android:paddingStart="@dimen/padding_small"
+                android:drawableStart="@drawable/icon_email"
+                android:gravity="center_vertical"
+                android:layout_margin="@dimen/margin_small"
+                android:drawablePadding="@dimen/padding_small"
+                tools:text="ammkisdmbabe143@gmail.com"
+                android:textSize="@dimen/text_regular_2x"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/margin_small"
+                />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/jobDetailsPhone"
+                android:layout_width="@dimen/textview_width_large"
+                android:layout_height="wrap_content"
+                android:paddingEnd="@dimen/padding_small"
+                android:paddingStart="@dimen/padding_small"
+                android:drawableStart="@drawable/icon_phone"
+                android:gravity="center_vertical"
+                android:layout_gravity="center_vertical"
+                android:drawablePadding="@dimen/padding_small"
+                android:text="09799666232"
+                android:layout_weight="3"
+                android:textSize="@dimen/text_regular_2x"
+                android:textStyle="bold" />
+            <ImageButton
+                android:id="@+id/callPnone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/icon_phone"
+                android:background="@drawable/yellow_btn"
+                android:foreground="@drawable/ripple_bg_primary"
+                android:layout_marginEnd="@dimen/margin_small"/>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/jobDetailsAvailablePost"
+            android:layout_width="@dimen/textview_width_large"
+            android:layout_height="wrap_content"
+            android:paddingEnd="@dimen/padding_small"
+            android:paddingStart="@dimen/padding_small"
+            android:drawableStart="@drawable/icon_profile"
+            android:gravity="center_vertical"
+            android:layout_margin="@dimen/margin_small"
+            android:drawablePadding="@dimen/padding_small"
+            tools:text="5 positions"
+            android:textSize="@dimen/text_regular_2x"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/margin_small"
+            />
+        <TextView
+            android:id="@+id/jobDetailsGender"
+            android:layout_width="@dimen/textview_width_large"
+            android:layout_height="wrap_content"
+            android:paddingEnd="@dimen/padding_small"
+            android:paddingStart="@dimen/padding_small"
+            android:drawableStart="@drawable/icon_gender"
+            android:gravity="center_vertical"
+            android:layout_margin="@dimen/margin_small"
+            android:drawablePadding="@dimen/padding_small"
+            tools:text="Male"
+            android:textSize="@dimen/text_regular_2x"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/margin_small"
+            />
+
+
+
+
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>

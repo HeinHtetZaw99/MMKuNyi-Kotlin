@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.ApplyFormActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.2"
+        android:scaleType="fitXY"
+        android:src="@drawable/job_search" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorTransparent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/margin_medium"
+            android:text="Apply Form"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/text_heading_2x"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_small"
+            android:background="@drawable/frame_rectangle"
+            android:orientation="vertical"
+            android:padding="@dimen/margin_medium">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_small"
+                android:layout_marginTop="@dimen/margin_small"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Your Name"
+                    android:textSize="@dimen/text_regular_2x" />
+
+                <EditText
+                    android:id="@+id/applyName"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="2"
+                    android:background="@drawable/frame"
+                    android:inputType="text"
+                    android:padding="@dimen/margin_small" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_small"
+                android:layout_marginTop="@dimen/margin_small"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Why We should Hire you"
+                    android:textSize="@dimen/text_regular_2x" />
+
+                <EditText
+                    android:id="@+id/whyRevelant"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="2"
+                    android:background="@drawable/frame"
+                    android:inputType="text"
+                    android:padding="@dimen/margin_small" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/applySkillForm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_small"
+            android:layout_marginStart="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_small"
+            android:background="@drawable/frame"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/skillTextApply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/padding_small"
+                android:layout_marginTop="@dimen/padding_small"
+                android:gravity="center"
+                android:text="Your Skills"
+                android:textSize="@dimen/text_regular_2x" />
+
+            <ImageButton
+                android:id="@+id/addApplySkillBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignTop="@id/skillText"
+                android:layout_marginEnd="@dimen/padding_small"
+                android:foreground="@drawable/ripple_bg"
+                android:background="@color/colorTransparent"
+                android:src="@drawable/icons_add_2" />
+
+            <EditText
+                android:id="@+id/applySkillItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/skillTextApply"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/padding_small"
+                android:background="@drawable/frame"
+                android:hint="Your skills"
+                android:inputType="text"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin_small" />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:layout_margin="@dimen/padding_small">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Can Lower Amount ? "
+                android:layout_weight="1"
+                android:textSize="@dimen/text_regular_2x"
+                android:layout_gravity="center"/>
+            <RadioGroup
+                android:id="@+id/applyCanLower"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:id="@+id/yesLower"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Yes"/>
+                <RadioButton
+                    android:id="@+id/noLower"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"/>
+            </RadioGroup>
+        </LinearLayout>
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/applyFormButton"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/colorAccent"
+        android:foreground="@drawable/ripple_bg_primary"
+        android:text="Apply"
+        android:layout_alignParentBottom="true"
+        />
+
+
+</RelativeLayout>
